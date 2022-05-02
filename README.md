@@ -62,21 +62,3 @@
 2021_EmbededdPrj_Demo > src > poly > mongo : 몽고와 관련된 코드를 모아놓은 디렉터리<br>
 2021_EmbededdPrj_Demo > src > poly >service : 비즈니스 로직을 정의한 디렉터리<br>
 2021_EmbededdPrj_Demo > src > poly > util > kakaoClass.java : 센서 정보 카톡 알림 작성 부분 <br>
-
-4. 민감사항으로 인한 추가 데이터 입력이 필요한 파일 정보<br>
-가) 데이터베이스(MariaDB) 주소와 로그인 정보<br>
-- 경로 : 2021_EmbededdPrj_Demo > src > config >context-datasource.xml <br>
-- 내용 : property 사용할 데이터베이스 주소 및 username, password<br>
-
-나) 데이터베이스(MongoDB) 주소와 로그인 정보<br>
-- 경로 : 2021_EmbededdPrj_Demo > src > config >context-mongodb.xml <br>
-- 내용 : {}안에 있는 내용을 사용자 정보에 맞게 기입<br>
-	<mongo:mongo-client host="{DB 주소}"<br>
-		port="{포트번호}" credentials="{사용자ID@DB명}" id="mongo"><br>
-	</mongo:mongo-client><br>
-<br>
-다) kakao 로그인을 위한 사용자 정보 기입<br>
-- 경로 : 2021_EmbededdPrj_Demo > src > poly > service > impl > kakaoService<br>
-- 내용 : {} 안에 사용자 정보 기입<br>
-private final String Redirect_URI = {"카카오에 등록한 리다이렉트 주소 기입"};<br>
-private final String RESTAPI_KEY = {"카카오에서 발급한 사용자 키 기입"};<br>
